@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dorka.becze</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/D-inverz-nagy.jpg"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="name">
+          <a href="#" id="hover-trigger">DORKA BECZE</a>
+        </div>
+
+        <div class="nav-links">
+          <a href="#about"><span>About</span></a>
+          <a href="#explore"><span>Explore</span></a>
+          <a href="#contact"><span>Contact</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section id="hero"></section>
+
+    <div class="overlay" id="overlay">
+      <div class="overlay-content">
+        <p>
+          Budapest-based graphic designer working across visual systems and
+          interaction design, with a focus on human-centred approaches.
+          <br />
+          <a href="#contact">
+            <span class="highlight">
+              Open to collaborations, creative projects, and new opportunities.
+            </span>
+          </a>
+        </p>
+
+        <button class="close-btn" id="close-btn">×</button>
+      </div>
+    </div>
+    <main>
+      <!-- About -->
+      <section id="about">
+        <section class="about-row">
+          <h2>ABOUT</h2>
+          <div class="about-content">
+            <p>
+              I am a graphic designer based in Budapest, working across visual
+              systems and interaction, often taking a human-centred approach. I
+              enjoy moving between applied work and experimental projects,
+              always leaving some room for curiosity and exploration.
+            </p>
+          </div>
+        </section>
+        <section class="about-row">
+          <h2>EDUCATION</h2>
+
+          <div class="education-content">
+            <p>
+              <strong>MA Interaction Design</strong><br />
+              Moholy-Nagy University of Art and Design, Budapest<br />
+              2026–present
+            </p>
+
+            <p>
+              <strong>BA Graphic Design</strong><br />
+              Moholy-Nagy University of Art and Design, Budapest<br />
+              2023–2026
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!-- Explore section -->
+
+      <section id="explore">
+        <button id="open-gallery" class="folder-btn" type="button">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+            />
+          </svg>
+          <span>PROJECT ARCHIVE </span>
+        </button>
+      </section>
+
+      <!-- PROJECT UNIVERSE -->
+      <div id="project-universe">
+        <button id="close-gallery" type="button">×</button>
+
+        <p class="universe-instruction">
+          (move to explore · pinch to organize)
+        </p>
+
+        <div id="gallery">
+          <a href="project01.html" class="tile">
+            <img
+              src="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/project01.jpg"
+              alt="Project 01"
+            />
+          </a>
+
+          <a href="project02.html" class="tile">
+            <img
+              src="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/project02.jpg"
+              alt="Project 02"
+            />
+          </a>
+
+          <a href="project03.html" class="tile">
+            <img
+              src="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/project03.jpg"
+              alt="Project 03"
+            />
+          </a>
+
+          <a href="project04.html" class="tile">
+            <img
+              src="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/project04.jpg"
+              alt="Project 04"
+            />
+          </a>
+
+          <a href="project05.html" class="tile">
+            <img
+              src="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/project05.jpg"
+              alt="Project 05"
+            />
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Dorka Becze © All Rights Reserved.</p>
+
+      <div class="footer-contact">
+        <button
+          class="copy-email"
+          type="button"
+          aria-label="Copy email address"
+        >
+          <span class="email-address">dorka.becze@gmail.com</span>
+          <img
+            src="/Users/dorka_becze/Desktop/dorkabecze.github.io/codingclass/images/copy.png"
+            class="copy-icon"
+            alt=""
+          />
+        </button>
+
+        <a href="mailto:dorka.becze@gmail.com"> [ GET IN TOUCH ] </a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

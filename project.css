@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: black;
+  color: white;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10pt;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: black;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.name {
+  flex: 1;
+  text-align: left;
+}
+
+.project-label {
+  color: #888;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* PROJECT IMAGE SLIDER */
+
+.project-slider {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide.active {
+  display: block;
+}
+
+
+/* SLIDER NAVIGATION ZONES */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  font-size: 0;
+  color: transparent;
+
+  z-index: 5;
+}
+
+.slider-prev {
+  left: 0;
+  cursor: w-resize;
+}
+
+.slider-next {
+  right: 0;
+  cursor: e-resize;
+}
+
+/* HIDE BUTTON HOVER STYLES */
+
+.slider-prev:hover,
+.slider-next:hover {
+  background: transparent;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .project-slider {
+    padding: 0 10px;
+  }
+
+  .slider-container {
+    height: 60vh;
+  }
+}
+
+.slider-prev,
+.slider-next {
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  pointer-events: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  line-height: 1;
+
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* PROJECT INFORMATION */
+
+.project-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 30px;
+
+  padding: 25px 20px 60px;
+
+  text-align: left;
+}
+
+.project-description {
+  max-width: 650px;
+}
+
+.project-description p {
+  margin: 0;
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 15px;
+}
+
+.detail-row span:first-child {
+  color: #888;
+}
+
+/* COUNTER — ALIGNED WITH PROJECT INFO */
+
+.slider-info {
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 10pt;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+  header nav {
+    padding: 15px 10px;
+  }
+
+  .project-info {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 10px;
+  }
+
+  .slider-info {
+    justify-self: end;
+  }
+
+  .project-label {
+    display: none;
+  }
+}
