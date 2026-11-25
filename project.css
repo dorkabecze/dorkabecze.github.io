@@ -252,3 +252,9 @@ header nav {
     display: none;
   }
 }
+
+.slider-container video.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
