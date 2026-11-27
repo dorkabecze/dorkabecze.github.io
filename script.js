@@ -62,8 +62,14 @@ if (typeof p5 !== 'undefined') {
     let hoveringExplore = false;
     const container = document.getElementById('project-particles');
 
-    p.preload = () => {
-  font = p.loadFont("fonts/IBMPlexMono-Regular.ttf");
+p.preload = () => {
+  console.log("EXPLORE: font loading");
+
+  font = p.loadFont(
+    "fonts/IBMPlexMono-Regular.ttf",
+    () => console.log("EXPLORE: font loaded successfully"),
+    (error) => console.error("EXPLORE: font loading failed", error)
+  );
 };
 
     function buildSpots() {
@@ -133,17 +139,19 @@ if (typeof p5 !== 'undefined') {
       buildSpots();
     });
 
-    p.setup = () => {
-      canvas = p.createCanvas(
-        container.clientWidth,
-        container.clientHeight
-      );
+p.setup = () => {
+  console.log("EXPLORE: setup started");
 
-      canvas.parent(container);
-      buildSpots();
+  canvas = p.createCanvas(
+    container.clientWidth,
+    container.clientHeight
+  );
 
-      resizeObserver.observe(container);
-    };
+  canvas.parent(container);
+  buildSpots();
+
+  resizeObserver.observe(container);
+};
 
     p.mouseClicked = (event) => {
       if (event.target !== canvas.elt) return;
