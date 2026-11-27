@@ -63,10 +63,8 @@ if (typeof p5 !== 'undefined') {
     const container = document.getElementById('project-particles');
 
     p.preload = () => {
-      font = p.loadFont(
-        "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf"
-      );
-    };
+  font = p.loadFont("fonts/IBMPlexMono-Regular.ttf");
+};
 
     function buildSpots() {
       spots = [];
